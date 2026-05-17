@@ -76,7 +76,7 @@ export class Home {
 
     // let apiURL = 'https://localhost:3000/flight-details';
 
-    this.http.post('http://localhost:5000/flight-details', this.flightForm.value)
+    this.http.post('https://flights-ticket.vercel.app/flight-details', this.flightForm.value)
 .subscribe(res => {
 
   console.log(res);
@@ -103,7 +103,7 @@ searchHotels(){
   alert('Hotel search functionality is under development. Please check back later.');
  console.log('Hotel Search Details:', this.hotelForm.value);
 
-    this.http.post('http://localhost:5000/hotel-details', this.hotelForm.value)
+    this.http.post('https://flights-ticket.vercel.app/hotel-details', this.hotelForm.value)
 .subscribe(res => {
 
   console.log(res);
