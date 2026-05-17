@@ -1,0 +1,26 @@
+<nav class="navbar">
+
+  <!-- Left Logo -->
+  <div class="company-name">
+    Travel Service LLC
+  </div>
+
+  <!-- Burger Button -->
+  <div class="burger" (click)="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- Right Menu -->
+  <div class="right-section" [class.show]="isMenuOpen">
+
+    <span class="phone-number">
+      +91 9876543210
+    </span>
+
+    <button class="contact-btn">
+      Contact Us
+    </button>
+
+  </div>
+
+</nav>

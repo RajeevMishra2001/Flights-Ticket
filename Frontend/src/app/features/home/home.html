@@ -1,0 +1,443 @@
+
+
+<section class="booking-section">
+    <!-- Top Tabs -->
+
+    <div class="top-menu">
+
+        <div class="menu-item active" [class.active]="activeTab === 'flight'" (click)="activeTab = 'flight'">
+            🛩️ International Flights
+        </div>
+
+        <div class="menu-item" [class.active]="activeTab === 'hotel'" (click)="activeTab = 'hotel'">
+            🏨 Hotels
+        </div>
+
+        <div class="menu-item" [class.active]="activeTab === 'domestic'" (click)="activeTab = 'domestic'">
+            ✈️ Domestic Flights
+        </div>
+
+        <div class="slider" [ngClass]="activeTab"></div>
+
+
+    </div>
+
+    <!-- Main Card -->
+
+    <div class="booking-card">
+
+        <!-- Trip Buttons -->
+
+        <div class="trip-type" *ngIf="activeTab === 'flight' || activeTab === 'domestic'">
+
+            <button class="trip-btn active-btn" [class.active-btn]="flightTab === 'oneway'"
+                (click)="flightTab = 'oneway'">
+                One Way
+            </button>
+
+            <button class="trip-btn" [class.active-btn]="flightTab === 'roundtrip'" (click)="flightTab = 'roundtrip'">
+                Round Trip
+            </button>
+
+        </div>
+
+        <div class="trip-type" *ngIf="activeTab === 'hotel'">
+
+            <button class="trip-btn active-btn">
+                Book your Hotel now at Best Price
+            </button>
+
+        </div>
+
+        <!-- Booking Fields -->
+
+        <form (ngSubmit)="searchFlights()" [formGroup]="flightForm">
+            <div class="search-row" *ngIf="activeTab === 'flight'">
+
+                <!-- FROM -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        From
+                    </span>
+
+                    <input type="text" class="date-input" [(ngModel)]="fromCity" formControlName="fromCity"
+                        [attr.list]="fromCity?.length ? 'fromAirportList' : null" placeholder="Search City or Airport">
+
+                    <datalist id="fromAirportList">
+
+                        <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
+
+                        </option>
+
+                    </datalist>
+
+                </div>
+
+                <!-- TO -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        To
+                    </span>
+
+                    <input type="text" class="date-input" [(ngModel)]="toCity" formControlName="toCity"
+                        [attr.list]="toCity?.length ? 'toAirportList' : null" placeholder="Search City or Airport">
+
+                    <datalist id="toAirportList">
+
+                        <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
+
+                        </option>
+
+                    </datalist>
+
+                </div>
+
+                <!-- DEPARTURE -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Departure
+                    </span>
+
+                    <input type="date" class="date-input" formControlName="departureDate">
+
+                </div>
+
+                <!-- RETURN -->
+
+                <div class="field" *ngIf="flightTab === 'roundtrip'">
+
+                    <span class="small-text">
+                        Return
+                    </span>
+
+                    <input type="date" class="date-input" formControlName="returnDate">
+
+                </div>
+
+                <!-- TRAVELLERS -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Travellers & Class
+                    </span>
+
+                    <h3>
+                        <input type="text" class="date-input" formControlName="travellers"
+                            placeholder="No. of Travellers & Class">
+                    </h3>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button class="search-btn" type="submit">
+                    Search →
+                </button>
+
+            </div>
+
+            <div class="popup-overlay" *ngIf="showConfirmation">
+
+    <div class="popup-box">
+
+        <h2>Confirm Submission</h2>
+
+        <p>Are you sure you want to submit this form?</p>
+
+        <div class="">
+
+            <input type="text"
+                   placeholder="Enter Contact Number"
+                   formControlName="contactNumber"
+                   class="contact-input">
+
+        </div>
+
+        <div class="popup-buttons">
+
+            <button class="cancel-btn" type="button" (click)="closeConfirmation()">
+                Cancel
+            </button>
+
+            <button class="confirm-btn" type="button" (click)="confirmSubmit()">
+                Confirm
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+        </form>
+
+        <!-- Hotels -->
+<form [formGroup]="hotelForm" (ngSubmit)="searchHotels()">
+        <div class="search-row" *ngIf="activeTab === 'hotel'">
+
+            <!-- state -->
+
+            <div class="field">
+
+                <span class="small-text">City, State</span>
+
+                <select formControlName="location">
+
+                    <option value="">Choose your location</option>
+
+                    <option *ngFor="let flight of flights" [value]="flight.city">
+                        {{ flight.city }}
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DEPARTURE -->
+
+            <div class="field">
+
+                <span class="small-text">
+                    Check In
+                </span>
+
+                <input type="date" class="date-input" formControlName="checkIn">
+
+            </div>
+
+            <!-- RETURN -->
+
+            <div class="field">
+
+                <span class="small-text">
+                    Check Out
+                </span>
+
+                <input type="date" class="date-input" formControlName="checkOut">
+
+            </div>
+
+            <!-- place -->
+
+            <div class="field">
+
+                <span class="small-text">
+                    Rooms
+                </span>
+
+                <h3>
+                    <input type="text" class="date-input" formControlName="rooms" placeholder="Guests and Rooms">
+                </h3>
+
+            </div>
+
+            <div class="field">
+
+                <span class="small-text">
+                    Contact Details
+                </span>
+
+                <h3>
+                    <input type="text" class="date-input" formControlName="contactDetails" placeholder="Enter Contact Details">
+                </h3>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button class="search-btn" type="submit">
+                Search →
+            </button>
+
+        </div>
+</form>
+
+        <!-- domestic flights -->
+    <form (ngSubmit)="searchFlights()" [formGroup]="flightForm">
+        <div class="search-row" *ngIf="activeTab === 'domestic'">
+
+            <!-- FROM -->
+            <div class="field">
+
+                <span class="small-text">
+                    From
+                </span>
+
+                <input type="text" class="date-input" [(ngModel)]="fromCity" formControlName="fromCity"
+                    list="fromAirportList" placeholder="Search City or Airport">
+
+                <datalist id="fromAirportList">
+
+                    <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
+
+                        {{ airport.city }} -
+                        {{ airport.airport }}
+
+                    </option>
+
+                </datalist>
+
+            </div>
+
+            <!-- TO -->
+            <div class="field">
+
+                <span class="small-text">
+                    To
+                </span>
+
+                <input type="text" class="date-input" [(ngModel)]="toCity" formControlName="toCity" list="toAirportList"
+                    placeholder="Search City or Airport">
+
+                <datalist id="toAirportList">
+
+                    <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
+
+                        {{ airport.city }} -
+                        {{ airport.airport }}
+
+                    </option>
+
+                </datalist>
+
+            </div>
+
+            <!-- DEPARTURE -->
+
+            <div class="field">
+
+                <span class="small-text">
+                    Departure
+                </span>
+
+                <input type="date" class="date-input" formControlName="departureDate">
+
+            </div>
+
+            <!-- RETURN -->
+
+            <div class="field" *ngIf="flightTab === 'roundtrip'">
+
+                <span class="small-text">
+                    Return
+                </span>
+
+                <input type="date" class="date-input" formControlName="returnDate">
+
+            </div>
+
+            <!-- TRAVELLERS -->
+
+            <div class="field">
+
+                <span class="small-text">
+                    Travellers & Class
+                </span>
+
+                <h3>
+                    <input type="text" class="date-input" formControlName="travellers" placeholder="No. of Travellers & Class">
+                </h3>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button class="search-btn" type="submit">
+                Search →
+            </button>
+
+        </div>
+    </form>
+
+
+
+        <!-- Special Fares -->
+
+        <div class="special-fares">
+
+            <span class="fare-title">
+                Special Fares (Optional) :
+            </span>
+
+            <button [class.active-fare]="selectedFare === 'student'" (click)="selectedFare = 'student'">
+
+                Student
+            </button>
+
+            <button [class.active-fare]="selectedFare === 'senior'" (click)="selectedFare = 'senior'">
+
+                Senior Citizen
+            </button>
+
+            <button [class.active-fare]="selectedFare === 'armed'" (click)="selectedFare = 'armed'">
+
+                Armed Forces
+            </button>
+
+        </div>
+
+        <!-- Bottom Bar -->
+
+        <div class="bottom-bar">
+
+            <div class="left-bottom">
+
+                <input type="checkbox">
+
+                <span>
+                    Always opt for Free Cancellation
+                </span>
+
+            </div>
+
+            <div class="bottom-text">
+                ₹0 cancellation fee • Instant refunds • Priority customer service
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- section 2  -->
+
+
+<section class="hero-section">
+
+    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Travel Image">
+
+    <div class="hero-text">
+
+        <h1>Book Flights & Hotels</h1>
+
+        <p>
+            Get the best deals on flight tickets and hotel bookings worldwide
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- Component Called -->
+
+
+<app-home-advertisement></app-home-advertisement>
