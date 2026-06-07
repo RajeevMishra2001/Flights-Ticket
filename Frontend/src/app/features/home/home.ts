@@ -152,12 +152,6 @@ searchHotels(){
   },
 
   {
-    code: 'DXB',
-    city: 'Dubai',
-    airport: 'Dubai International Airport'
-  },
-
-  {
     code: 'BLR',
     city: 'Bangalore',
     airport: 'Kempegowda International Airport'

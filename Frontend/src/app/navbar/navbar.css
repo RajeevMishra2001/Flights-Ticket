@@ -10,18 +10,18 @@
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:white;
-  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  background:linear-gradient(135deg,#ffffff,#f5f9ff);
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
   position:relative;
+  border-bottom:1px solid rgba(0,102,255,0.1);
 }
 
 .company-name{
   font-size:28px;
-  font-weight:bold;
-  background:#f7881a;
-  color:white;
-  padding:8px 15px;
-  border-radius:6px;
+  font-weight:700;
+  color:#0b3d91;
+  letter-spacing:0.5px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.08);
 }
 
 .right-section{
@@ -32,21 +32,47 @@
 
 .phone-number{
   font-size:18px;
+  font-weight:600;
+  color:#444;
+  padding:10px 18px;
+  background:#eef5ff;
+  border-radius:30px;
+  border:1px solid #d8e8ff;
+  transition:0.3s;
+}
+
+.phone-number:hover{
+  color:#0b3d91;
+  background:#dcecff;
 }
 
 .contact-btn{
-  padding:10px 18px;
+  padding:12px 24px;
   border:none;
-  background:red;
+  background:linear-gradient(135deg,#0b3d91,#00a8ff);
   color:white;
-  border-radius:5px;
+  font-weight:600;
+  border-radius:30px;
   cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(11,61,145,0.25);
+}
+
+.contact-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(11,61,145,0.35);
 }
 
 .burger{
   display:none;
-  font-size:24px;
+  font-size:28px;
+  color:#0b3d91;
   cursor:pointer;
+  transition:0.3s;
+}
+
+.burger:hover{
+  color:#00a8ff;
 }
 
 /* Mobile */
@@ -54,13 +80,12 @@
 @media(max-width:768px){
 
   .company-name{
-  font-size:18px;
-  font-weight:semi-bold;
-  background:#f7881a;
-  color:white;
-  padding:4px 8px;
-  border-radius:6px;
-}
+    font-size:18px;
+    font-weight:600;
+    color:#0b3d91;
+    padding:4px 8px;
+    border-radius:6px;
+  }
 
   .burger{
     display:block;
@@ -81,12 +106,22 @@
     padding:20px;
     width:220px;
 
-    border-radius:10px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    border:1px solid #edf2ff;
   }
 
   .right-section.show{
     display:flex;
   }
 
+  .phone-number{
+    width:100%;
+    text-align:center;
+    font-size:16px;
+  }
+
+  .contact-btn{
+    width:100%;
+  }
 }

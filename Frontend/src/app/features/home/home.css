@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.hero-section img{
+.hero-section video{
   width: 100%;
   height: 500px;
   object-fit: cover;
@@ -112,7 +112,7 @@ body{
 }
 
 .active{
-  border-bottom: 4px solid #f08b07;
+  border-bottom: 4px solid #0b3d91;
 }
 
 .booking-title{
@@ -233,7 +233,7 @@ select{
   height: 100px;
   padding: 0 45px;
   border: none;
-  background: #f7881a;
+  background: #234f9b;
   color: white;
   font-size: 28px;
   font-weight: bold;
@@ -242,7 +242,7 @@ select{
 }
 
 .search-btn:hover{
-  background: #f7461a;
+  background: #0b3d91;
   transform: translateY(-2px);
   color: white;
 }

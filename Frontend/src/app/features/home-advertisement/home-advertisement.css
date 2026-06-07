@@ -61,76 +61,218 @@
 
 /* HOTEL CARDS */
 
-.hotel-cards {
+/* ===========================
+   HOTEL CARDS SECTION
+=========================== */
 
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+.hotel-cards{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
 }
 
-.hotel-card {
+/* ===========================
+   HOTEL CARD
+=========================== */
 
-  width: 23%;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
+.hotel-card{
+
+  width:23%;
+
+  background:#ffffff;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  transition:all 0.35s ease;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.08);
+
+  border:1px solid #edf2ff;
 }
 
-.hotel-card:hover {
+.hotel-card:hover{
 
-  transform: translateY(-5px);
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 18px 35px rgba(0,0,0,0.15);
 }
 
-.hotel-card img {
+/* ===========================
+   IMAGE
+=========================== */
 
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.hotel-card img{
+
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  transition:transform .5s ease;
 }
 
-.hotel-card h4 {
+.hotel-card:hover img{
 
-  font-size: 18px;
-  padding: 12px 15px 5px;
+  transform:scale(1.08);
 }
 
-.rating {
+/* ===========================
+   HOTEL NAME
+=========================== */
 
-  padding: 0 15px;
-  margin-bottom: 8px;
+.hotel-card h4{
+
+  font-size:20px;
+
+  font-weight:700;
+
+  color:#0B3D91;
+
+  padding:18px 18px 8px;
+
+  margin:0;
 }
 
-.price {
+/* ===========================
+   RATING
+=========================== */
 
-  font-weight: bold;
-  padding: 0 15px 18px;
-  color: #111;
-  font-size: 18px;
+.rating{
+
+  padding:0 18px;
+
+  margin-bottom:12px;
+
+  color:#ffb400;
+
+  font-size:16px;
+
+  font-weight:600;
+}
+
+/* ===========================
+   PRICE
+=========================== */
+
+.price{
+
+  padding:0 18px 20px;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  color:#111827;
+}
+
+/* ===========================
+   OPTIONAL LOCATION TEXT
+=========================== */
+
+.hotel-location{
+
+  padding:0 18px;
+
+  color:#6b7280;
+
+  font-size:14px;
+
+  margin-bottom:10px;
+}
+
+/* ===========================
+   BOOK NOW BUTTON
+=========================== */
+
+.hotel-btn{
+
+  margin:0 18px 20px;
+
+  width:calc(100% - 36px);
+
+  border:none;
+
+  padding:12px;
+
+  border-radius:10px;
+
+  background:linear-gradient(
+  135deg,
+  #0B3D91,
+  #2563eb
+  );
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.hotel-btn:hover{
+
+  background:linear-gradient(
+  135deg,
+  #082d6b,
+  #1d4ed8
+  );
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media(max-width:992px){
+
+  .hotels-section{
+    max-width:90%;
+  }
+
+  .hotel-card{
+    width:48%;
+  }
+
+  .section-title{
+    font-size:24px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+  .hotel-card{
+    width:100%;
+  }
+
+  .hotel-card img{
+    height:220px;
+  }
+
+  .hotel-card h4{
+    font-size:18px;
+  }
+
+  .price{
+    font-size:20px;
+  }
 }
 
 /* ====================== */
 /* TABLET RESPONSIVE */
 /* ====================== */
 
-@media (max-width: 992px) {
-
-  .hotels-section {
-
-    max-width: 90%;
-  }
-
-  .hotel-card {
-
-    width: 48%;
-  }
-
-  .section-title {
-
-    font-size: 24px;
-  }
-}
 
 /* ====================== */
 /* MOBILE RESPONSIVE */
