@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
 .footer {
-    background: #e8ecea;
+    background: #00060c;
     padding: 40px;
     margin-top: 40px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     overflow: hidden;
+    
 }
 
 /* TOP */
@@ -33,7 +35,7 @@
 
 .footer-column a{
     text-decoration: none;
-    color: #222;
+    color: white;
     cursor: pointer;
     transition: 0.3s;
     line-height: 1.6;
@@ -44,7 +46,7 @@
 
     font-size: 18px;
     margin-bottom: 18px;
-    color: #000;
+    color: white;
     font-weight: 700;
 }
 
@@ -52,7 +54,7 @@
 
     margin-bottom: 10px;
     font-size: 18px;
-    color: #222;
+    color: white;
     cursor: pointer;
     transition: 0.3s;
     line-height: 1.6;
@@ -126,7 +128,7 @@
 .footer-links a {
 
     text-decoration: none;
-    color: #111;
+    color: white;
     font-size: 18px;
     transition: 0.3s;
 }
