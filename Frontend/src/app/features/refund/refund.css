@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.refund-hero {
+  background: linear-gradient(135deg, #ff6b35, #ff8c42);
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.refund-container {
+  background: #fffaf5;
+  padding: 70px 8%;
+}
+
+.intro-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.08);
+}
+
+.intro-card h2 {
+  color: #d9480f;
+  margin-bottom: 15px;
+}
+
+.timeline {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #ff8c42;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: #ff6b35;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: white;
+  flex: 1;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.timeline-content h2 {
+  color: #d9480f;
+  margin-bottom: 15px;
+}
+
+.timeline-content p,
+.timeline-content li {
+  line-height: 1.8;
+  color: #555;
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #d9480f, #ff6b35);
+  color: white;
+  padding: 35px;
+  border-radius: 20px;
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.contact-grid h4 {
+  margin-bottom: 8px;
+}
+
+.contact-grid p {
+  line-height: 1.6;
+}
+
+@media(max-width:768px) {
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .refund-container {
+    padding: 40px 20px;
+  }
+
+  .timeline-item {
+    gap: 15px;
+  }
+
+  .timeline::before {
+    left: 22px;
+  }
+}

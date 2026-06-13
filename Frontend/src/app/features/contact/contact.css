@@ -1,0 +1,177 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.contact-hero{
+  background: linear-gradient(135deg,#e11d48,#fb7185);
+  color:white;
+  text-align:center;
+  padding:90px 20px;
+}
+
+.hero-content h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+.hero-content p{
+  max-width:700px;
+  margin:auto;
+  font-size:1.1rem;
+}
+
+.contact-container{
+  padding:70px 8%;
+  background:linear-gradient(
+    135deg,
+    #fff5f7,
+    #fff1f2
+  );
+}
+
+.welcome-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  margin-bottom:40px;
+  box-shadow:0 10px 25px rgba(225,29,72,0.08);
+}
+
+.welcome-card h2{
+  color:#be123c;
+  margin-bottom:15px;
+}
+
+.welcome-card p{
+  color:#555;
+  line-height:1.8;
+}
+
+.support-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-bottom:40px;
+}
+
+.support-card{
+  background:white;
+  text-align:center;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(225,29,72,0.08);
+  transition:0.3s;
+}
+
+.support-card:hover{
+  transform:translateY(-6px);
+}
+
+.icon{
+  font-size:45px;
+  margin-bottom:15px;
+}
+
+.support-card h3{
+  color:#be123c;
+  margin-bottom:10px;
+}
+
+.hours-card{
+  background:white;
+  padding:35px;
+  border-radius:20px;
+  margin-bottom:40px;
+  box-shadow:0 8px 20px rgba(225,29,72,0.08);
+}
+
+.hours-card h2{
+  color:#be123c;
+  margin-bottom:25px;
+}
+
+.hours-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.hours-grid h4{
+  margin-bottom:10px;
+  color:#e11d48;
+}
+
+.office-section{
+  margin-bottom:40px;
+}
+
+.office-section h2{
+  text-align:center;
+  color:#be123c;
+  margin-bottom:30px;
+}
+
+.office-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+.office-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(225,29,72,0.08);
+}
+
+.office-card h3{
+  color:#be123c;
+  margin-bottom:15px;
+}
+
+.office-card p{
+  line-height:1.8;
+  color:#555;
+}
+
+.escalation-card{
+  background:linear-gradient(135deg,#be123c,#e11d48);
+  color:white;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.escalation-card h2{
+  margin-bottom:20px;
+}
+
+.escalation-card h3{
+  margin:20px 0;
+  color:#ffe4e6;
+}
+
+.escalation-card p{
+  line-height:1.8;
+}
+
+@media(max-width:768px){
+
+  .hero-content h1{
+    font-size:2rem;
+  }
+
+  .contact-container{
+    padding:40px 20px;
+  }
+
+  .welcome-card,
+  .hours-card,
+  .office-card,
+  .support-card,
+  .escalation-card{
+    padding:25px;
+  }
+}

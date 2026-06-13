@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.privacy-banner {
+  background: linear-gradient(135deg, #029b02, #7ad468);
+  padding: 90px 20px;
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.banner-content p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.privacy-wrapper {
+  padding: 70px 8%;
+  background: linear-gradient(
+    135deg,
+    #f8f7ff,
+    #eef2ff,
+    #fdfcff
+  );
+}
+
+.policy-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.08);
+  border-left: 6px solid #7c3aed;
+  transition: 0.3s;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px);
+}
+
+.policy-number {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(124, 58, 237, 0.12);
+}
+
+.policy-card h2 {
+  color: #312e81;
+  margin-bottom: 15px;
+}
+
+.policy-card p,
+.policy-card li {
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.policy-card ul {
+  padding-left: 20px;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #312e81, #4f46e5);
+  color: white;
+  padding: 35px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.contact-card h2 {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-item {
+  margin-bottom: 18px;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #dbeafe;
+}
+
+.contact-item p {
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-wrapper {
+    padding: 40px 20px;
+  }
+
+  .policy-card {
+    padding: 20px;
+  }
+
+  .policy-number {
+    display: none;
+  }
+}

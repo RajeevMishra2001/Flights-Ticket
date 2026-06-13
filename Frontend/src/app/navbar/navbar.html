@@ -1,27 +1,63 @@
-<nav class="navbar">
+<nav class="navbar" data-aos="fade-right">
 
   <!-- Left Logo -->
-  <div class="company-name" style="display: flex; gap: 10px;">
+  <div class="company-name" >
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active" style="display: flex; gap: 10px;">
     <img style="width: 80px;" src="assets/TravelLogo.png" alt="">
     <h3 style="padding-top: 20px;">Travel LLC Services</h3>
+    </a>
   </div>
 
+<!-- <div style="display: flex; gap: 50px;  align-items: center;" [class.show]="isMenuOpen">
+
+  
+
+ 
+
+  
+</div> -->
   <!-- Burger Button -->
-  <div class="burger" (click)="toggleMenu()">
-    ☰
-  </div>
+ 
 
   <!-- Right Menu -->
   <div class="right-section" [class.show]="isMenuOpen">
 
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="closeMenu()">
+    Home
+  </a>
+  
+  <a [routerLink]="['/about']" routerLinkActive="router-link-active" (click)="closeMenu()">
+    About Us
+  </a>
+
+     <div class="dropdown">
+  <a [routerLink]="['/policy']" routerLinkActive="router-link-active">
+    Policies ▼
+  </a>
+
+  <div class="dropdown-content">
+    <a [routerLink]="['/privacy']" (click)="closeMenu()">Privacy Policy</a>
+    <a [routerLink]="['/refund']" (click)="closeMenu()">Refund & Cancellation Policy</a>
+    <a [routerLink]="['/faqs']" (click)="closeMenu()">Frequently Asked Questions (FAQs)</a>
+  </div>
+</div>
+
+<a [routerLink]="['/termsCondition']" routerLinkActive="router-link-active" (click)="closeMenu()">
+    Terms and Conditions
+  </a>
+
     <span class="phone-number">
-      +91 9876543210
+      <p style="cursor: pointer;" (click)="openWhatsApp()">Chat 📧</p>
     </span>
 
-    <button class="contact-btn">
-      Contact Us
-    </button>
+    
+      <a class="contact-btn" style="text-align: center;" [routerLink]="['/contact']" (click)="closeMenu()">Contact us</a>
+    
 
+  </div>
+
+   <div class="burger" (click)="toggleMenu()" data-aos="fade-left">
+    ☰
   </div>
 
 </nav>
