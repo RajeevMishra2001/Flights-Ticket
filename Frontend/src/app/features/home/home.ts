@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ɵresetIncrementalHydrationEnabledWarnedForTests } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HomeAdvertisement } from '../home-advertisement/home-advertisement';
+import AOS from 'aos';
 
 
 @Component({
@@ -21,9 +22,14 @@ export class Home {
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.flightSubmission();
     this.hotelSubmission();
+
+        AOS.init({
+          duration: 1000,
+          once: true
+        });
   }
 
 
