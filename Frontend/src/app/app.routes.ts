@@ -6,6 +6,8 @@ import { Refund } from './features/refund/refund';
 import { Faqs } from './features/faqs/faqs';
 import { Termscondition } from './features/termscondition/termscondition';
 import { Contact } from './features/contact/contact';
+import { Booking } from './features/booking/booking';
+import { Payment } from './features/payment/payment';
 
 export const routes: Routes = [
     {path:'', component: Home},
@@ -16,5 +18,8 @@ export const routes: Routes = [
     {path:'faqs', component: Faqs},
     {path:'termsCondition', component: Termscondition},
     {path:'contact', component: Contact},  
+    {path:'booking', component: Booking},
+    {path:'payment', component: Payment},
+
 
 ];

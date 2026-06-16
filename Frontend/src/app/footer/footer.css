@@ -88,9 +88,8 @@
 }
 
 .footer-column h3 {
-  display: inline-block;
-  background: #faf9fc; /* Orange background */
-  color: #0e0303;
+  display: inline-block; 
+  color: white;
   padding: 8px 16px;
   margin-bottom: 15px;
   font-size: 22px;

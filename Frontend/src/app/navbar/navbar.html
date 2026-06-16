@@ -3,7 +3,7 @@
   <!-- Left Logo -->
   <div class="company-name" >
     <a [routerLink]="['/home']" routerLinkActive="router-link-active" style="display: flex; gap: 10px;">
-    <img style="width: 80px;" src="assets/TravelLogo.png" alt="">
+    <img style="width: 70px;" src="assets/travelLogo.png" alt="Travel Services Logo">
     <h3 style="padding-top: 20px;">Travel Services LLC</h3>
     </a>
   </div>
@@ -46,9 +46,18 @@
     Terms and Conditions
   </a>
 
-    <span class="phone-number">
-      <p style="cursor: pointer;" (click)="openWhatsApp()">Chat 📧</p>
-    </span>
+  <div class="dropdown">
+  <a [routerLink]="['/booking']" routerLinkActive="router-link-active">
+    Booking & Payment  ▼
+  </a>
+
+  <div class="dropdown-content">
+    <a [routerLink]="['/booking']" (click)="closeMenu()">Our Booking Process</a>
+    <a [routerLink]="['/payment']" (click)="closeMenu()">Payment Security and invoicing Policy</a>
+  </div>
+</div>
+
+    
 
     
       <a class="contact-btn" style="text-align: center;" [routerLink]="['/contact']" (click)="closeMenu()">Contact us</a>

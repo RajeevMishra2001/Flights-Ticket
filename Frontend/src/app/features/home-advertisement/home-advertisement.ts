@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home-advertisement',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './home-advertisement.html',
   styleUrl: './home-advertisement.css',
 })
@@ -14,6 +15,8 @@ export class HomeAdvertisement {
     const url = `https://wa.me/${8178787397}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   }
+
+  selectedTab: string = 'domestic'; // Default selected tab
 
 
 }

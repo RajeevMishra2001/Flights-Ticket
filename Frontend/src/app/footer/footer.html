@@ -9,7 +9,7 @@
         <div class="footer-column">
 
             <div style="display: flex; gap: .5px;">
-                <img src="assets/TravelLogo.png" alt="" style="width: 42px; height: 42px;">
+                <img src="assets/travelLogo.png" alt="" style="width: 42px; height: 42px;">
             <h3>Travel Service LLC</h3>
             </div>
             <p>Top Destination</p>
@@ -82,12 +82,12 @@
 
         <div class="footer-links">
 
-            <a href="/about">About Us</a>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/refund">Refund Policy & Cancellation Policy</a>
-            <a href="/faqs">FAQ'S</a>
-            <a href="/contact">Contact Us</a>
-            <a href="/termsCondition">Terms & Conditions</a>
+            <a [routerLink]="['/about']" (click)="scrollToTop()">About Us</a>
+            <a [routerLink]="['/privacy']" (click)="scrollToTop()">Privacy Policy</a>
+            <a [routerLink]="['/refund']" (click)="scrollToTop()">Refund Policy & Cancellation Policy</a>
+            <a [routerLink]="['/faqs']" (click)="scrollToTop()">FAQ'S</a>
+            <a [routerLink]="['/contact']" (click)="scrollToTop()">Contact Us</a>
+            <a [routerLink]="['/termsCondition']" (click)="scrollToTop()">Terms & Conditions</a>
 
         </div>
 

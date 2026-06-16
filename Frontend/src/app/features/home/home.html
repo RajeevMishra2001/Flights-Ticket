@@ -1,5 +1,3 @@
-
-
 <section class="booking-section">
     <!-- Top Tabs -->
 
@@ -63,18 +61,18 @@
                     </span>
 
                     <input type="text" class="date-input" [(ngModel)]="fromCity" formControlName="fromCity"
-                    list="fromAirportList" placeholder="Search City or Airport">
+                        list="fromAirportList" placeholder="Search City or Airport">
 
-                <datalist id="fromAirportList">
+                    <datalist id="fromAirportList">
 
-                    <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
+                        <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
 
-                        {{ airport.city }} -
-                        {{ airport.airport }}
+                            {{ airport.city }} -
+                            {{ airport.airport }}
 
-                    </option>
+                        </option>
 
-                </datalist>
+                    </datalist>
 
 
 
@@ -89,18 +87,18 @@
                     </span>
 
                     <input type="text" class="date-input" [(ngModel)]="toCity" formControlName="toCity"
-                    list="fromAirportList" placeholder="Search City or Airport">
+                        list="fromAirportList" placeholder="Search City or Airport">
 
-                <datalist id="fromAirportList">
+                    <datalist id="fromAirportList">
 
-                    <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
+                        <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
 
-                        {{ airport.city }} -
-                        {{ airport.airport }}
+                            {{ airport.city }} -
+                            {{ airport.airport }}
 
-                    </option>
+                        </option>
 
-                </datalist>
+                    </datalist>
 
                 </div>
 
@@ -153,220 +151,220 @@
 
             <div class="popup-overlay" *ngIf="showConfirmation">
 
-    <div class="popup-box">
+                <div class="popup-box">
 
-        <h2>Confirm Submission</h2>
+                    <h2>Confirm Submission</h2>
 
-        <p>Are you sure you want to submit this form?</p>
+                    <p>Are you sure you want to submit this form?</p>
 
-        <div class="">
+                    <div class="">
 
-            <input type="text"
-                   placeholder="Enter Contact Number"
-                   formControlName="contactNumber"
-                   class="contact-input">
+                        <input type="text" placeholder="Enter Contact Number" formControlName="contactNumber"
+                            class="contact-input">
 
-        </div>
+                    </div>
 
-        <div class="popup-buttons">
+                    <div class="popup-buttons">
 
-            <button class="cancel-btn" type="button" (click)="closeConfirmation()">
-                Cancel
-            </button>
+                        <button class="cancel-btn" type="button" (click)="closeConfirmation()">
+                            Cancel
+                        </button>
 
-            <button class="confirm-btn" type="button" (click)="confirmSubmit()">
-                Confirm
-            </button>
+                        <button class="confirm-btn" type="button" (click)="confirmSubmit()">
+                            Confirm
+                        </button>
 
-        </div>
+                    </div>
 
-    </div>
+                </div>
 
-</div>
+            </div>
 
 
         </form>
 
         <!-- Hotels -->
-<form [formGroup]="hotelForm" (ngSubmit)="searchHotels()">
-        <div class="search-row" *ngIf="activeTab === 'hotel'">
+        <form [formGroup]="hotelForm" (ngSubmit)="searchHotels()">
+            <div class="search-row" *ngIf="activeTab === 'hotel'">
 
-            <!-- state -->
+                <!-- state -->
 
-            <div class="field">
+                <div class="field">
 
-                <span class="small-text">City, State</span>
+                    <span class="small-text">City, State</span>
 
-                <select formControlName="location">
+                    <select formControlName="location">
 
-                    <option value="">Choose your location</option>
+                        <option value="">Choose your location</option>
 
-                    <option *ngFor="let flight of flights" [value]="flight.city">
-                        {{ flight.city }}
-                    </option>
+                        <option *ngFor="let flight of flights" [value]="flight.city">
+                            {{ flight.city }}
+                        </option>
 
-                </select>
+                    </select>
+
+                </div>
+
+
+
+                <!-- DEPARTURE -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Check In
+                    </span>
+
+                    <input type="date" class="date-input" formControlName="checkIn">
+
+                </div>
+
+                <!-- RETURN -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Check Out
+                    </span>
+
+                    <input type="date" class="date-input" formControlName="checkOut">
+
+                </div>
+
+                <!-- place -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Rooms
+                    </span>
+
+                    <h3>
+                        <input type="text" class="date-input" formControlName="rooms" placeholder="Guests and Rooms">
+                    </h3>
+
+                </div>
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Contact Details
+                    </span>
+
+                    <h3>
+                        <input type="text" class="date-input" formControlName="contactDetails"
+                            placeholder="Enter Contact Details">
+                    </h3>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button class="search-btn" type="submit">
+                    Search →
+                </button>
 
             </div>
-
-
-
-            <!-- DEPARTURE -->
-
-            <div class="field">
-
-                <span class="small-text">
-                    Check In
-                </span>
-
-                <input type="date" class="date-input" formControlName="checkIn">
-
-            </div>
-
-            <!-- RETURN -->
-
-            <div class="field">
-
-                <span class="small-text">
-                    Check Out
-                </span>
-
-                <input type="date" class="date-input" formControlName="checkOut">
-
-            </div>
-
-            <!-- place -->
-
-            <div class="field">
-
-                <span class="small-text">
-                    Rooms
-                </span>
-
-                <h3>
-                    <input type="text" class="date-input" formControlName="rooms" placeholder="Guests and Rooms">
-                </h3>
-
-            </div>
-
-            <div class="field">
-
-                <span class="small-text">
-                    Contact Details
-                </span>
-
-                <h3>
-                    <input type="text" class="date-input" formControlName="contactDetails" placeholder="Enter Contact Details">
-                </h3>
-
-            </div>
-
-
-            <!-- BUTTON -->
-
-            <button class="search-btn" type="submit">
-                Search →
-            </button>
-
-        </div>
-</form>
+        </form>
 
         <!-- domestic flights -->
-    <form (ngSubmit)="searchFlights()" [formGroup]="flightForm">
-        <div class="search-row" *ngIf="activeTab === 'domestic'">
+        <form (ngSubmit)="searchFlights()" [formGroup]="flightForm">
+            <div class="search-row" *ngIf="activeTab === 'domestic'">
 
-            <!-- FROM -->
-            <div class="field">
+                <!-- FROM -->
+                <div class="field">
 
-                <span class="small-text">
-                    From
-                </span>
+                    <span class="small-text">
+                        From
+                    </span>
 
-                <input type="text" class="date-input" [(ngModel)]="fromCity" formControlName="fromCity"
-                    list="fromAirportList" placeholder="Search City or Airport">
+                    <input type="text" class="date-input" [(ngModel)]="fromCity" formControlName="fromCity"
+                        list="fromAirportList" placeholder="Search City or Airport">
 
-                <datalist id="fromAirportList">
+                    <datalist id="fromAirportList">
 
-                    <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
+                        <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
 
-                        {{ airport.city }} -
-                        {{ airport.airport }}
+                            {{ airport.city }} -
+                            {{ airport.airport }}
 
-                    </option>
+                        </option>
 
-                </datalist>
+                    </datalist>
+
+                </div>
+
+                <!-- TO -->
+                <div class="field">
+
+                    <span class="small-text">
+                        To
+                    </span>
+
+                    <input type="text" class="date-input" [(ngModel)]="toCity" formControlName="toCity"
+                        list="toAirportList" placeholder="Search City or Airport">
+
+                    <datalist id="toAirportList">
+
+                        <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
+
+                            {{ airport.city }} -
+                            {{ airport.airport }}
+
+                        </option>
+
+                    </datalist>
+
+                </div>
+
+                <!-- DEPARTURE -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Departure
+                    </span>
+
+                    <input type="date" class="date-input" formControlName="departureDate">
+
+                </div>
+
+                <!-- RETURN -->
+
+                <div class="field" *ngIf="flightTab === 'roundtrip'">
+
+                    <span class="small-text">
+                        Return
+                    </span>
+
+                    <input type="date" class="date-input" formControlName="returnDate">
+
+                </div>
+
+                <!-- TRAVELLERS -->
+
+                <div class="field">
+
+                    <span class="small-text">
+                        Travellers & Class
+                    </span>
+
+                    <h3>
+                        <input type="text" class="date-input" formControlName="travellers"
+                            placeholder="No. of Travellers & Class">
+                    </h3>
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button class="search-btn" type="submit">
+                    Search →
+                </button>
 
             </div>
-
-            <!-- TO -->
-            <div class="field">
-
-                <span class="small-text">
-                    To
-                </span>
-
-                <input type="text" class="date-input" [(ngModel)]="toCity" formControlName="toCity" list="toAirportList"
-                    placeholder="Search City or Airport">
-
-                <datalist id="toAirportList">
-
-                    <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
-
-                        {{ airport.city }} -
-                        {{ airport.airport }}
-
-                    </option>
-
-                </datalist>
-
-            </div>
-
-            <!-- DEPARTURE -->
-
-            <div class="field">
-
-                <span class="small-text">
-                    Departure
-                </span>
-
-                <input type="date" class="date-input" formControlName="departureDate">
-
-            </div>
-
-            <!-- RETURN -->
-
-            <div class="field" *ngIf="flightTab === 'roundtrip'">
-
-                <span class="small-text">
-                    Return
-                </span>
-
-                <input type="date" class="date-input" formControlName="returnDate">
-
-            </div>
-
-            <!-- TRAVELLERS -->
-
-            <div class="field">
-
-                <span class="small-text">
-                    Travellers & Class
-                </span>
-
-                <h3>
-                    <input type="text" class="date-input" formControlName="travellers" placeholder="No. of Travellers & Class">
-                </h3>
-
-            </div>
-
-            <!-- BUTTON -->
-
-            <button class="search-btn" type="submit">
-                Search →
-            </button>
-
-        </div>
-    </form>
+        </form>
 
 
 
@@ -428,8 +426,8 @@
 <section class="hero-section" data-aos="fade-Bottom">
 
     <video autoplay muted loop playsinline>
-    <source src="assets/travel.mp4" type="video/mp4">
-  </video>
+        <source src="assets/travel.mp4" type="video/mp4">
+    </video>
 
     <div class="hero-text">
 
@@ -442,6 +440,12 @@
     </div>
 
 </section>
+
+<span class="whatsapp-chat" data-aos="fade-left">
+    <p style="cursor: pointer;" (click)="openWhatsApp()">What's App 
+    </p>
+    <img style="width: 35px;" src="assets/logo.png" alt="WhatsApp">
+</span>
 
 
 

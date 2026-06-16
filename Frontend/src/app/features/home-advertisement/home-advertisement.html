@@ -11,13 +11,13 @@
   <!-- Tabs -->
   <div class="hotel-tabs">
 
-    <button class="tab active">Domestic Hotel</button>
-    <button class="tab">International Hotel</button>
+    <button class="tab active" [class.active]="selectedTab === 'domestic'" (click)="selectedTab = 'domestic'">Domestic Hotel</button>
+    <button class="tab" [class.active]="selectedTab === 'international'" (click)="selectedTab = 'international'">International Hotel</button>
 
   </div>
 
-  <!-- Cards -->
-  <div class="hotel-cards">
+  <!-- Cards Domestic-->
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'">
 
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=500&auto=format&fit=crop">
@@ -29,7 +29,41 @@
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1583136161141-411471bb942c?w=500&auto=format&fit=crop">
       <h4>Pride Sun Village Resort</h4>
-      <div class="rating">⭐⭐⭐⭐</div>    
+      <div class="rating">⭐⭐⭐⭐</div>
+      <div class="price">₹ 3493</div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop">
+      <h4>Taj Lands End</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="price">₹ 17875</div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1727940231283-63f3c23957db?w=500&auto=format&fit=crop">
+      <h4>Taj Yeshwantpur</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="price">₹ 9126</div>
+    </div>
+
+  </div>
+
+
+  <!-- Cards international-->
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'">
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=500&auto=format&fit=crop">
+      <h4>Welcomhotel Dwarka</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="price">₹ 7833</div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1583136161141-411471bb942c?w=500&auto=format&fit=crop">
+      <h4>Pride Sun Village Resort</h4>
+      <div class="rating">⭐⭐⭐⭐</div>
       <div class="price">₹ 3493</div>
     </div>
 
@@ -53,12 +87,10 @@
 
 
 <!-- section 2 -->
-
-
+ 
 <section class="hotels-section">
 
-  <!-- Cards -->
-  <div class="hotel-cards">
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'">
 
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=500&auto=format&fit=crop">
@@ -70,7 +102,7 @@
     <div class="hotel-card">
       <img src="https://images.unsplash.com/photo-1583136161141-411471bb942c?w=500&auto=format&fit=crop">
       <h4>Pride Sun Village Resort</h4>
-      <div class="rating">⭐⭐⭐⭐</div>    
+      <div class="rating">⭐⭐⭐⭐</div>
       <div class="price">₹ 3493</div>
     </div>
 
@@ -90,14 +122,50 @@
 
   </div>
 
+
+  <!-- Cards international-->
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'">
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=500&auto=format&fit=crop">
+      <h4>Welcomhotel Dwarka</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="price">₹ 7833</div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1583136161141-411471bb942c?w=500&auto=format&fit=crop">
+      <h4>Pride Sun Village Resort</h4>
+      <div class="rating">⭐⭐⭐⭐</div>
+      <div class="price">₹ 3493</div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop">
+      <h4>Taj Lands End</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="price">₹ 17875</div>
+    </div>
+
+    <div class="hotel-card">
+      <img src="https://images.unsplash.com/photo-1727940231283-63f3c23957db?w=500&auto=format&fit=crop">
+      <h4>Taj Yeshwantpur</h4>
+      <div class="rating">⭐⭐⭐⭐⭐</div>
+      <div class="price">₹ 9126</div>
+    </div>
+
+  </div>
+
+
 </section>
+
 
 
 
 <!-- call me section  -->
 
 
-<section class="deals-section">
+<section class="deals-section" data-aos="fade-up">
 
   <div class="deals-left">
 
@@ -130,7 +198,7 @@
 
 <!-- Third Section -->
 
-<section class="why-section">
+<section class="why-section" data-aos="fade-up">
 
   <div class="why-left">
     <img src="https://images.unsplash.com/flagged/photo-1551135049-83f3419ef05c?q=80&w=1170&auto=format&fit=crop">

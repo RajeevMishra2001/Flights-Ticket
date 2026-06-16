@@ -9,6 +9,7 @@
   color: white;
   text-align: center;
   padding: 80px 20px;
+  margin-top: 40px;
 }
 
 .hero-content h1 {
@@ -157,3 +158,32 @@ background: linear-gradient(135deg, #f3f4ff, #dce7ff);
     padding: 20px;
   }
 }
+
+
+.whatsapp-chat {
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  transition: all 0.3s ease;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsapp-chat:hover {
+  transform: translateY(-3px);
+}
+
+
+
+
+
