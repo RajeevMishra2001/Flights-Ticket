@@ -28,6 +28,10 @@ export class Navbar implements OnInit {
 
   closeMenu() {
     this.isMenuOpen = false;
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
   }
 
   @HostListener('document:click', ['$event'])
