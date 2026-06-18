@@ -149,8 +149,8 @@ body{
 
 /* ACTIVE BUTTON */
 .active-btn {
-  border: 2px solid #f08b07;
-  color: #f08b07;
+  border: 2px solid #f05107;
+  color: #f05107;
   background: white;
   font-weight: 600;
 }
@@ -554,8 +554,8 @@ select{
 }
 
 .special-fares button.active-fare {
-    border: 2px solid #f08b07;
-    color: #f08b07;
+    border: 2px solid #f05107;
+    color: #f05107;
     background: white;
 }
 
@@ -615,8 +615,8 @@ select{
 
 /* ACTIVE BUTTON */
 .active-btn {
-  border: 2px solid #f08b07;
-  color: #f08b07;
+  border: 2px solid #f05107;
+  color: #f05107;
   background: white;
   font-weight: 600;
 }
