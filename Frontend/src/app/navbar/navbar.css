@@ -104,7 +104,7 @@
     right: -400px;   /* Hidden initially */
     width: 350px;
     max-width: 85%;
-    height: 65vh;
+    height: 50vh;
     background: white;
     display: flex;
     flex-direction: column;
@@ -135,9 +135,6 @@
 
 .dropdown {
   position: relative;
-  /* display: inline-block; */
-  display: flex;
-  align-items: center;
 }
 
 .dropdown-content {
@@ -146,9 +143,14 @@
   top: 100%;
   left: 0;
   min-width: 400px;
-  background: white;
+  background: #fff; /* or your menu background */
+  z-index: 9999;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+  display: block;
 }
 
 .dropdown-content a{

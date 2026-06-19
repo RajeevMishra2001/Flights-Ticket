@@ -3,7 +3,7 @@
   <!-- Left Logo -->
   <div class="company-name" >
     <a [routerLink]="['/home']" routerLinkActive="router-link-active" style="display: flex; gap: 10px;">
-    <img style="width: 70px;" src="assets/travelLogo.png" alt="Travel Services Logo">
+    <img style="width: 80px;" src="assets/travelLogo.png" alt="Travel Services Logo">
     <h3 style="padding-top: 20px;">Travel Services LLC</h3>
     </a>
   </div>
@@ -30,8 +30,8 @@
     About Us
   </a>
 
-     <div class="dropdown">
-  <a [routerLink]="['/policy']" routerLinkActive="router-link-active">
+  <div class="dropdown">
+  <a>
     Policies ▼
   </a>
 
@@ -47,7 +47,7 @@
   </a>
 
   <div class="dropdown">
-  <a [routerLink]="['/booking']" routerLinkActive="router-link-active">
+  <a>
     Booking & Payment  ▼
   </a>
 
@@ -60,7 +60,7 @@
     
 
     
-      <a class="contact-btn" style="text-align: center;" [routerLink]="['/contact']" (click)="closeMenu()">Contact us</a>
+  <a class="contact-btn" style="text-align: center;" [routerLink]="['/contact']" (click)="closeMenu()">Contact us</a>
     
 
   </div>
