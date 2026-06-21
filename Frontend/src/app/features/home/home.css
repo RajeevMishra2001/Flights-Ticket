@@ -46,6 +46,17 @@
   font-size: 22px;
 }
 
+.city {
+  font-weight: 700;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.airport {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
 
 
 /* Responsive */

@@ -34,6 +34,17 @@ export class Home implements AfterViewInit {
   }
 
 
+  changeTab(tab: string) {
+
+  this.activeTab = tab;
+
+  this.flightForm.reset();
+
+  this.fromCity = '';
+  this.toCity = '';
+
+}
+
   activeTab: string = 'flight';
   flightTab: string = 'oneway';
   selectedFare: string = 'student';

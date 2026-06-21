@@ -3,15 +3,15 @@
 
     <div class="top-menu">
 
-        <div class="menu-item active" [class.active]="activeTab === 'flight'" (click)="activeTab = 'flight'">
+        <div class="menu-item active" [class.active]="activeTab === 'flight'" (click)="changeTab('flight')">
             🛩️ International Flights
         </div>
 
-        <div class="menu-item" [class.active]="activeTab === 'hotel'" (click)="activeTab = 'hotel'">
+        <div class="menu-item" [class.active]="activeTab === 'hotel'" (click)="changeTab('hotel')">
             🏨 Hotels
         </div>
 
-        <div class="menu-item" [class.active]="activeTab === 'domestic'" (click)="activeTab = 'domestic'">
+        <div class="menu-item" [class.active]="activeTab === 'domestic'" (click)="changeTab('domestic')">
             ✈️ Domestic Flights
         </div>
 
@@ -67,8 +67,8 @@
 
                         <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
 
-                            {{ airport.city }} -
-                            {{ airport.airport }}
+                            <!-- <span class="city">{{ airport.city }}</span> -->
+                            <span class="airport">{{ airport.airport }}</span>
 
                         </option>
 
@@ -93,8 +93,8 @@
 
                         <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
 
-                            {{ airport.city }} -
-                            {{ airport.airport }}
+                             <!-- <span class="city">{{ airport.city }}</span> -->
+                            <span class="airport">{{ airport.airport }}</span>
 
                         </option>
 
@@ -286,8 +286,8 @@
 
                         <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
 
-                            {{ airport.city }} -
-                            {{ airport.airport }}
+                             <!-- <span class="city">{{ airport.city }}</span> -->
+                            <span class="airport">{{ airport.airport }}</span>
 
                         </option>
 
@@ -309,8 +309,8 @@
 
                         <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
 
-                            {{ airport.city }} -
-                            {{ airport.airport }}
+                             <!-- <span class="city">{{ airport.city }}</span> -->
+                            <span class="airport">{{ airport.airport }}</span>
 
                         </option>
 
