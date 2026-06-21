@@ -4,6 +4,7 @@ import { Component, ɵresetIncrementalHydrationEnabledWarnedForTests } from '@an
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HomeAdvertisement } from '../home-advertisement/home-advertisement';
 import AOS from 'aos';
+import {  ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 
 @Component({
@@ -12,7 +13,7 @@ import AOS from 'aos';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {
+export class Home implements AfterViewInit {
 
   flightForm!: FormGroup;
 
@@ -539,4 +540,21 @@ Intflights = [
   }
 
 
+  
+
+@ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
+
+ngAfterViewInit() {
+  const video = this.bgVideo.nativeElement;
+
+  video.load();
+
+  video.oncanplay = () => {
+    video.play().catch(err => console.log(err));
+  };
 }
+
+
+}
+
+
