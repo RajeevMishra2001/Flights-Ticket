@@ -65,9 +65,9 @@ app.post('/flight-details', async (req, res) => {
 
     await transporter.sendMail({
 
-      from: 'rajeev13112001@gmail.com',
+      from: 'rajeev.mishra07@zohomail.in',
 
-      to: 'rajeev.mishra07@zohomail.in',
+      to: 'support@thetravelservicellc.com',
 
       subject: 'New Flight Booking',
 

@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './refund.html',
   styleUrl: './refund.css',
 })
-export class Refund {}
+export class Refund {
+   openEmail() {
+  window.location.href = 'mailto:support@thetravelservicellc.com';
+}
+}

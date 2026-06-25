@@ -15,5 +15,8 @@ export class About {
     window.open(url, '_blank');
   }
 
+   openEmail() {
+  window.location.href = 'mailto:support@thetravelservicellc.com';
+}
 
 }

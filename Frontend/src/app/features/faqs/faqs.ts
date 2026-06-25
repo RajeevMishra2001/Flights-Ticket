@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './faqs.html',
   styleUrl: './faqs.css',
 })
-export class Faqs {}
+export class Faqs {
+   openEmail() {
+  window.location.href = 'mailto:support@thetravelservicellc.com';
+}
+}

@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './privacy.html',
   styleUrl: './privacy.css',
 })
-export class Privacy {}
+export class Privacy {
+   openEmail() {
+  window.location.href = 'mailto:support@thetravelservicellc.com';
+}
+
+}

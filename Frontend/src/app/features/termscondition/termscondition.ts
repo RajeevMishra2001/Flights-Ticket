@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './termscondition.html',
   styleUrl: './termscondition.css',
 })
-export class Termscondition {}
+export class Termscondition {
+   openEmail() {
+  window.location.href = 'mailto:support@thetravelservicellc.com';
+}
+}
