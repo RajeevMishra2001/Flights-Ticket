@@ -13,4 +13,8 @@ export class Footer {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+//    openEmail() {
+//   window.location.href = 'mailto:support@thetravelservicellc.com';
+// }
+
 }
