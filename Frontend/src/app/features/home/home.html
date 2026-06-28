@@ -462,3 +462,36 @@
 
 
 <app-home-advertisement></app-home-advertisement>
+
+
+<div class="toast-notification error" *ngIf="showToast">
+
+  <button class="toast-close" (click)="showToast = false">
+    &times;
+  </button>
+
+  <div class="toast-icon">⚠️</div>
+
+  <div class="toast-content">
+    <h4>Validation Error</h4>
+    <p>{{ toastMessage }}</p>
+  </div>
+
+</div>
+
+<div class="success-popup" *ngIf="success">
+
+  <button class="popup-close-btn" (click)="success = false">
+    &times;
+  </button>
+
+  <div class="success-circle">
+    ✓
+  </div>
+
+  <div class="success-details">
+    <h2>Thank You!</h2>
+    <p>{{ toastMessage }}</p>
+  </div>
+
+</div>

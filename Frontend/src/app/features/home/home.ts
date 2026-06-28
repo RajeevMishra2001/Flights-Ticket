@@ -68,20 +68,33 @@ export class Home implements AfterViewInit {
 
   showConfirmation: boolean = false;
 
+  showToast = false;
+  success=false;
+toastMessage = '';
+toastTitle = '';
+toastType = 'success';
+
   searchFlights() {
 
-    if (this.flightForm.invalid) {
-      alert('Please fill in all required fields correctly.');
-    }
+  if (this.flightForm.invalid) {
 
-    if (this.flightForm.valid) {
-      this.showConfirmation = true;
-    }
+    this.toastMessage = 'Please fill in all required fields correctly.';
+    this.showToast = true;
+
+    setTimeout(() => {
+      this.showToast = false;
+    }, 1000);
+
+    return;
   }
 
+  this.showConfirmation = true;
+}
   closeConfirmation() {
     this.showConfirmation = false;
   }
+
+  
 
   confirmSubmit() {
      const contact = this.flightForm.value.contactNumber?.trim();
@@ -94,25 +107,41 @@ export class Home implements AfterViewInit {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!contact) {
-    alert('Please enter your contact number.');
+    this.toastMessage = 'Please enter your contact number.';
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+    }, 1000);
     this.showConfirmation = true;
     return;
   }
 
   if (!phoneRegex.test(contact)) {
-    alert('Please enter a valid contact number.');
+    this.toastMessage = 'Please enter Valid contact number.';
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+    }, 1000);
     this.showConfirmation = true;
     return;
   }
 
   if (!email) {
-    alert('Please enter your email address.');
+    this.toastMessage = 'Please enter your Email Address.';
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+    }, 1000);
     this.showConfirmation = true;
     return;
   }
 
   if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address.');
+    this.toastMessage = 'Please enter a valid email address.';
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+    }, 1000);
     this.showConfirmation = true;
     return;
   }
@@ -120,25 +149,60 @@ export class Home implements AfterViewInit {
   // Close popup
   this.showConfirmation = false;
 
-  console.log('Flight Search Details:', this.flightForm.value);
+console.log('Flight Search Details:', this.flightForm.value);
 
-  this.http.post(
-    'https://flights-ticket.vercel.app/flight-details',
-    this.flightForm.value
-  ).subscribe(res => {
+this.http.post(
+  'https://flights-ticket.vercel.app/flight-details',
+  this.flightForm.value
+).subscribe({
+
+  next: (res: any) => {
+
     console.log(res);
-  });
 
-      
+    // Success Notification
+    this.toastType = 'success';
+    this.toastTitle = 'Thank You!';
+    this.toastMessage =
+      'Your booking request has been submitted successfully. Our travel expert will contact you shortly.';
 
+    this.success = true;
+
+    setTimeout(() => {
+      this.success = false;
+    }, 4000);
+
+    // Reset Form
     this.flightForm.reset({
       fromCity: '',
       toCity: '',
       departureDate: '',
       returnDate: '',
       travellers: '',
-      contactNumber: ''
+      contactNumber: '',
+      email: ''
     });
+
+  },
+
+  error: (err) => {
+
+    console.log(err);
+
+    this.toastType = 'error';
+    this.toastTitle = 'Submission Failed';
+    this.toastMessage =
+      'Something went wrong. Please try again.';
+
+    this.showToast = true;
+
+    setTimeout(() => {
+      this.showToast = false;
+    }, 500);
+
+  }
+
+});
   }
 
 searchHotels(){
