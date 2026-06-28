@@ -31,15 +31,15 @@
   <!-- Right Menu -->
   <div class="right-section" [class.show]="isMenuOpen" data-aos="fade-left">
 
-    <a [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="closeMenu()">
+    <a class="navlink" [routerLink]="['/home']" routerLinkActive="router-link-active" (click)="closeMenu()">
     Home
   </a>
   
-  <a [routerLink]="['/about']" routerLinkActive="router-link-active" (click)="closeMenu()">
+  <a class="navlink" [routerLink]="['/about']" routerLinkActive="router-link-active" (click)="closeMenu()">
     About Us
   </a>
 
-  <div class="dropdown">
+  <div class="dropdown navlink" routerLinkActive="router-link-active" >
   <a>
     Policies ▼
   </a>
@@ -51,11 +51,11 @@
   </div>
 </div>
 
-<a [routerLink]="['/termsCondition']" routerLinkActive="router-link-active" (click)="closeMenu()">
+<a class="navlink" [routerLink]="['/termsCondition']" routerLinkActive="router-link-active" (click)="closeMenu()">
     Terms and Conditions
   </a>
 
-  <div class="dropdown">
+  <div class="dropdown navlink" routerLinkActive="router-link-active" >
   <a>
     Booking & Payment  ▼
   </a>
