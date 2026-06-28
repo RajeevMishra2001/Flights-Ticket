@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Tab } from '../../services/tab';
 
 @Component({
   selector: 'app-home-advertisement',
@@ -9,6 +10,21 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeAdvertisement {
 
+constructor(private tabService: Tab) {}
+  
+  goToHotel() {
+
+  // Tell other component to select hotel tab
+  this.tabService.selectTab('hotel');
+
+  // Scroll to top
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
+}
+
   openWhatsApp() {
     const phoneNumber = '8178787397'; // Replace with your WhatsApp number
     const message = 'Hello! I am interested in your services.'; // Replace with your desired message
@@ -17,6 +33,9 @@ export class HomeAdvertisement {
   }
 
   selectedTab: string = 'domestic'; // Default selected tab
+
+
+  
 
 
 }

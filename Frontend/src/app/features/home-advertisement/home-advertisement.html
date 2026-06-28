@@ -3,7 +3,7 @@
   <h2 class="section-title">Popular Hotels</h2>
 
   <p class="section-desc">
-    Hotel hassles are big concerns but not at Travel Service LLC!
+    Hotel hassles are big concerns but not at Travel Services LLC!
   </p>
 
   <!-- <a class="read-more">Read more</a> -->
@@ -17,9 +17,9 @@
   </div>
 
   <!-- Cards Domestic-->
-  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'">
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'" (click)="goToHotel()">
 
-    <div class="hotel-card">
+    <div class="hotel-card" >
       <img src="assets/tajmahal.jpg">
       <h4>The Taj Mahal Palace, Mumbai</h4>
       <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
@@ -51,7 +51,7 @@
 
 
   <!-- Cards international-->
-  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'">
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'" style="margin-top: 20px;" (click)="goToHotel()">
 
     <div class="hotel-card">
       <img src="assets/leelapalace.jpg">
@@ -90,7 +90,7 @@
  
 <section class="hotels-section">
 
-  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'">
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'" (click)="goToHotel()">
 
     <div class="hotel-card">
       <img src="assets/plazahotel.jpg">
@@ -124,7 +124,7 @@
 
 
   <!-- Cards international-->
-  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'">
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'" style="margin-top: 20px;" (click)="goToHotel()">
 
     <div class="hotel-card">
       <img src="assets/bagota.jpg">

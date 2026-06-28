@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { HomeAdvertisement } from '../home-advertisement/home-advertisement';
 import AOS from 'aos';
 import {  ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-
+import { Tab } from '../../services/tab';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +21,7 @@ export class Home implements AfterViewInit {
   toCity: string = '';
 
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private tabService: Tab) { }
 
   ngOnInit(): void {
     this.flightSubmission();
@@ -31,6 +31,10 @@ export class Home implements AfterViewInit {
           duration: 1000,
           once: true
         });
+
+         this.tabService.tab$.subscribe(tab => {
+    this.changeTab(tab);
+  });
   }
 
 
@@ -564,6 +568,7 @@ ngAfterViewInit() {
     video.play().catch(err => console.log(err));
   };
 }
+
 
 
 }
