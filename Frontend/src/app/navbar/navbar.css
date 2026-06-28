@@ -4,7 +4,7 @@
   box-sizing:border-box;
 }
 
-.navbar{
+/* .navbar{
   width:100%;
   padding:15px 25px;
   display:flex;
@@ -17,14 +17,55 @@
   position: sticky;
   top: 0;
   z-index: 9999;
-}
+} */
 
-.company-name{
+/* .company-name{
   font-size:20px;
   font-weight:700;
   color:#0b3d91;
   letter-spacing:0.5px;
   text-shadow:1px 1px 2px rgba(0,0,0,0.08);
+} */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:8px 16px;
+    background:linear-gradient(15deg,#ffffff,#b8e2f7);
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  border-bottom:1px solid rgba(0,102,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+}
+
+.logo-container img{
+    width:100px;
+    height:90px;
+}
+
+.logo-container h3{
+    margin:0;
+    padding:0;
+    font-size:28px;
+    color:#0b3d91;
+    font-weight:700;
+    line-height:1;
+     letter-spacing:0.5px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.08);
+}
+
+.burger{
+    display:none;
+    cursor:pointer;
 }
 
 .right-section{
@@ -70,13 +111,13 @@
   box-shadow:0 8px 20px rgba(11,61,145,0.35);
 }
 
-.burger{
+/* .burger{
   display:none;
   font-size:28px;
   color:#0b3d91;
   cursor:pointer;
   transition:0.3s;
-}
+} */
 
 .burger:hover{
   color:#00a8ff;
@@ -84,19 +125,43 @@
 
 /* Mobile */
 
-@media(max-width:1300px){
 
-  .company-name{
-    font-size:18px;
-    font-weight:600;
-    color:#0b3d91;
-    padding:4px 8px;
-    border-radius:6px;
-  }
 
-  .burger{
-    display:block;
-  }
+@media (max-width:1300px){
+
+    .navbar{
+        padding:10px 15px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .logo-container{
+        display:flex;
+        align-items:center;
+        gap:8px;
+    }
+
+    .logo-container img{
+        
+    width: 80px;
+    height:70px;
+
+    }
+
+    .logo-container h3{
+        font-size:22px;
+        margin:0;
+        line-height:1.2;
+    }
+
+    .burger{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:30px;
+        cursor:pointer;
+    }
 
   .right-section{
     position: fixed;

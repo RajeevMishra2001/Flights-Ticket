@@ -10,16 +10,57 @@ import { Booking } from './features/booking/booking';
 import { Payment } from './features/payment/payment';
 
 export const routes: Routes = [
-    {path:'', component: Home},
-    {path:'home', component: Home},
-    {path:'about', component: About},
-    {path:'privacy', component: Privacy},
-    {path:'refund', component: Refund},
-    {path:'faqs', component: Faqs},
-    {path:'termsCondition', component: Termscondition},
-    {path:'contact', component: Contact},  
-    {path:'booking', component: Booking},
-    {path:'payment', component: Payment},
-
-
+  {
+    path: '',
+    component: Home,
+    title: 'Home | Travel Services LLC'
+  },
+  {
+    path: 'home',
+    component: Home,
+    title: 'Home | Travel Services LLC'
+  },
+  {
+    path: 'about',
+    component: About,
+    title: 'About Us | Travel Services LLC'
+  },
+  {
+    path: 'privacy',
+    component: Privacy,
+    title: 'Privacy Policy | Travel Services LLC'
+  },
+  {
+    path: 'refund',
+    component: Refund,
+    title: 'Refund Policy | Travel Services LLC'
+  },
+  {
+    path: 'faqs',
+    component: Faqs,
+    title: 'FAQs | Travel Services LLC'
+  },
+  {
+    path: 'termsCondition',
+    component: Termscondition,
+    title: 'Terms & Conditions | Travel Services LLC'
+  },
+  {
+    path: 'contact',
+    component: Contact,
+    title: 'Contact Us | Travel Services LLC'
+  },
+  {
+    path: 'booking',
+    component: Booking,
+    title: 'Booking | Travel Services LLC'
+  },
+  {
+    path: 'payment',
+    component: Payment,
+    title: 'Payment | Travel Services LLC'
+  }
 ];
+
+
+

@@ -61,6 +61,8 @@ export class Home implements AfterViewInit {
       returnDate: [''],
       travellers: ['', Validators.required],
       contactNumber: [''],
+      email: ['']
+
     });
   }
 
@@ -82,28 +84,51 @@ export class Home implements AfterViewInit {
   }
 
   confirmSubmit() {
-    this.showConfirmation = false;
+     const contact = this.flightForm.value.contactNumber?.trim();
+  const email = this.flightForm.value.email?.trim();
 
-     const contact =  this.flightForm.value.contactNumber
+  // Global phone validation (8-15 digits with optional +)
+  const phoneRegex = /^\+?[1-9]\d{7,14}$/;
 
-  if (!contact || contact.length < 3) {
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    alert('Please enter valid contact number');
+  if (!contact) {
+    alert('Please enter your contact number.');
     this.showConfirmation = true;
-
     return;
   }
 
-    console.log('Flight Search Details:', this.flightForm.value);
+  if (!phoneRegex.test(contact)) {
+    alert('Please enter a valid contact number.');
+    this.showConfirmation = true;
+    return;
+  }
 
-    // let apiURL = 'https://localhost:3000/flight-details';
+  if (!email) {
+    alert('Please enter your email address.');
+    this.showConfirmation = true;
+    return;
+  }
 
-    this.http.post('https://flights-ticket.vercel.app/flight-details', this.flightForm.value)
-.subscribe(res => {
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    this.showConfirmation = true;
+    return;
+  }
 
-  console.log(res);
+  // Close popup
+  this.showConfirmation = false;
 
-});
+  console.log('Flight Search Details:', this.flightForm.value);
+
+  this.http.post(
+    'https://flights-ticket.vercel.app/flight-details',
+    this.flightForm.value
+  ).subscribe(res => {
+    console.log(res);
+  });
+
       
 
     this.flightForm.reset({

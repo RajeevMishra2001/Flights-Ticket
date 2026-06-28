@@ -8,7 +8,7 @@
         </div>
 
         <div class="menu-item" [class.active]="activeTab === 'hotel'" (click)="changeTab('hotel')">
-            🏨 Hotels
+            🏨 Hotels Booking
         </div>
 
         <div class="menu-item" [class.active]="activeTab === 'domestic'" (click)="changeTab('domestic')">
@@ -93,7 +93,7 @@
 
                         <option *ngFor="let airport of Intflights" [value]="airport.city + ' - ' + airport.airport">
 
-                             <!-- <span class="city">{{ airport.city }}</span> -->
+                            <!-- <span class="city">{{ airport.city }}</span> -->
                             <span class="airport">{{ airport.airport }}</span>
 
                         </option>
@@ -159,8 +159,16 @@
 
                     <div class="">
 
+                        <span class="">
+                            Contact Number
+                        </span>
                         <input type="text" placeholder="Enter Contact Number" formControlName="contactNumber"
                             class="contact-input">
+
+                            <span class="">
+                            Email ID
+                        </span>
+                        <input type="text" placeholder="Enter Email id" formControlName="email" class="contact-input">
 
                     </div>
 
@@ -248,12 +256,12 @@
                 <div class="field">
 
                     <span class="small-text">
-                        Contact Details
+                        Contact Number
                     </span>
 
                     <h3>
                         <input type="text" class="date-input" formControlName="contactDetails"
-                            placeholder="Enter Contact Details">
+                            placeholder="Your Contact Number">
                     </h3>
 
                 </div>
@@ -286,7 +294,7 @@
 
                         <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
 
-                             <!-- <span class="city">{{ airport.city }}</span> -->
+                            <!-- <span class="city">{{ airport.city }}</span> -->
                             <span class="airport">{{ airport.airport }}</span>
 
                         </option>
@@ -309,7 +317,7 @@
 
                         <option *ngFor="let airport of flights" [value]="airport.city + ' - ' + airport.airport">
 
-                             <!-- <span class="city">{{ airport.city }}</span> -->
+                            <!-- <span class="city">{{ airport.city }}</span> -->
                             <span class="airport">{{ airport.airport }}</span>
 
                         </option>
@@ -425,15 +433,9 @@
 
 <section class="hero-section" data-aos="fade-Bottom">
 
-    <video
-  #bgVideo
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto">
-  <source src="assets/travelthree.mp4" type="video/mp4">
-</video>
+    <video #bgVideo autoplay muted loop playsinline preload="auto">
+        <source src="assets/travelthree.mp4" type="video/mp4">
+    </video>
 
     <div class="hero-text">
 
@@ -448,7 +450,7 @@
 </section>
 
 <span class="whatsapp-chat" data-aos="fade-left">
-    <p style="cursor: pointer;" (click)="openWhatsApp()">What's App 
+    <p style="cursor: pointer;" (click)="openWhatsApp()">What's App
     </p>
     <img style="width: 35px;" src="assets/logo.png" alt="WhatsApp">
 </span>
