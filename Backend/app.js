@@ -35,6 +35,7 @@ app.post('/flight-details', async (req, res) => {
 
     const {
       contactNumber, 
+      email,
       fromCity,
       toCity,
       departureDate,
@@ -47,6 +48,8 @@ app.post('/flight-details', async (req, res) => {
     const text = `
 
     Contact Number : ${contactNumber}
+
+    Email : ${email}
 
     From City : ${fromCity}
 
