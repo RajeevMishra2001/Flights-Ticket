@@ -4,15 +4,15 @@
     <div class="top-menu">
 
         <div class="menu-item active" [class.active]="activeTab === 'flight'" (click)="changeTab('flight')">
-            🛩️ International Flights
+            <svg lucidePlaneLanding></svg> &nbsp; Flight Booking Assistance
         </div>
 
         <div class="menu-item" [class.active]="activeTab === 'hotel'" (click)="changeTab('hotel')">
-            🏨 Hotels Booking
+            <svg lucideHotel></svg> &nbsp;  Hotel Booking Assistance 
         </div>
 
         <div class="menu-item" [class.active]="activeTab === 'domestic'" (click)="changeTab('domestic')">
-            ✈️ Domestic Flights
+            <svg lucidePlane></svg> &nbsp; Domestic Flights
         </div>
 
         <div class="slider" [ngClass]="activeTab"></div>
@@ -403,9 +403,9 @@
 
         <!-- Bottom Bar -->
 
-        <!-- <div class="bottom-bar">
+        <div class="bottom-bar">
 
-            <div class="left-bottom">
+            <!-- <div class="left-bottom">
 
                 <input type="checkbox">
 
@@ -413,13 +413,13 @@
                     Always opt for Free Cancellation
                 </span>
 
-            </div>
+            </div> -->
 
             <div class="bottom-text">
-                ₹0 cancellation fee • Instant refunds • Priority customer service
+                Flight availability, fares, schedules and booking conditions are subject to the applicable terms of the relevant travel provider.
             </div>
 
-        </div> -->
+        </div>
 
     </div>
 
@@ -439,10 +439,10 @@
 
     <div class="hero-text">
 
-        <h1>Book Flights & Hotels</h1>
+        <h2>Travel Assistance for Flights & Hotels</h2>
 
         <p>
-            Get the best deals on flight tickets and hotel bookings worldwide
+            Get assistance with flight and hotel booking requests, changes, cancellations and travel-related enquiries.
         </p>
 
     </div>

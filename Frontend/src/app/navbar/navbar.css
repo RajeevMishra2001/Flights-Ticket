@@ -63,6 +63,18 @@
   text-shadow:1px 1px 2px rgba(0,0,0,0.08);
 }
 
+.logo-container h3 p{
+    margin-top:10px;
+    padding:0;
+    font-size:28px;
+    color:#071d44;
+    font-weight:700;
+    line-height:1;
+     letter-spacing:0.5px;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.08);
+  font-size: 14px;
+}
+
 .burger{
     display:none;
     cursor:pointer;

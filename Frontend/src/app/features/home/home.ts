@@ -6,10 +6,16 @@ import { HomeAdvertisement } from '../home-advertisement/home-advertisement';
 import AOS from 'aos';
 import {  ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Tab } from '../../services/tab';
+import {
+  LucideHotel,
+  LucideHouse,
+  LucidePlane,
+  LucidePlaneLanding,
+} from '@lucide/angular';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, HomeAdvertisement],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, HomeAdvertisement, LucideHouse, LucidePlane, LucideHotel, LucidePlaneLanding],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

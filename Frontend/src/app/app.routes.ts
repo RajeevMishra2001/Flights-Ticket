@@ -13,52 +13,52 @@ export const routes: Routes = [
   {
     path: '',
     component: Home,
-    title: 'Home | Travel Services LLC'
+    title: 'Home | The Travel Services'
   },
   {
     path: 'home',
     component: Home,
-    title: 'Home | Travel Services LLC'
+    title: 'Home | The Travel Services'
   },
   {
     path: 'about',
     component: About,
-    title: 'About Us | Travel Services LLC'
+    title: 'About Us | The Travel Services'
   },
   {
     path: 'privacy',
     component: Privacy,
-    title: 'Privacy Policy | Travel Services LLC'
+    title: 'Privacy Policy | The Travel Services'
   },
   {
     path: 'refund',
     component: Refund,
-    title: 'Refund Policy | Travel Services LLC'
+    title: 'Refund Policy | The Travel Services'
   },
   {
     path: 'faqs',
     component: Faqs,
-    title: 'FAQs | Travel Services LLC'
+    title: 'FAQs | The Travel Services'
   },
   {
     path: 'termsCondition',
     component: Termscondition,
-    title: 'Terms & Conditions | Travel Services LLC'
+    title: 'Terms & Conditions | The Travel Services'
   },
   {
     path: 'contact',
     component: Contact,
-    title: 'Contact Us | Travel Services LLC'
+    title: 'Contact Us | The Travel Services'
   },
   {
     path: 'booking',
     component: Booking,
-    title: 'Booking | Travel Services LLC'
+    title: 'Booking | The Travel Services'
   },
   {
     path: 'payment',
     component: Payment,
-    title: 'Payment | Travel Services LLC'
+    title: 'Payment | The Travel Services'
   }
 ];
 
