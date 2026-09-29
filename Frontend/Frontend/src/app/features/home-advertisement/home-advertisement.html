@@ -1,0 +1,233 @@
+<section class="hotels-section">
+
+  <h2 class="section-title">Popular Hotel Destinations</h2>
+
+  <p class="section-desc">
+    Explore popular hotel options and get assistance with your hotel booking requirements.
+  </p>
+
+  <!-- <a class="read-more">Read more</a> -->
+
+  <!-- Tabs -->
+  <div class="hotel-tabs">
+
+    <button class="tab active" [class.active]="selectedTab === 'domestic'" (click)="selectedTab = 'domestic'">Domestic Hotel</button>
+    <button class="tab" [class.active]="selectedTab === 'international'" (click)="selectedTab = 'international'">International Hotel</button>
+
+  </div>
+
+  <!-- Cards Domestic-->
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'" (click)="goToHotel()">
+
+    <div class="hotel-card" >
+      <img src="assets/tajmahal.jpg">
+      <h4>The Taj Mahal Palace, Mumbai</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 7833</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/tajlake.jpg">
+      <h4>Taj Lake Palace, Udaipur</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐</div> --> 
+      <!-- <div class="price">₹ 3493</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/rambagh.jpg">
+      <h4>Rambagh Palace, Jaipur</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 17875</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/wildflower.jpg">
+      <h4>Wildflower Hall, Shimla</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 9126</div> -->
+    </div>
+
+  </div>
+
+
+  <!-- Cards international-->
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'domestic'" style="margin-top: 20px;" (click)="goToHotel()">
+
+    <div class="hotel-card">
+      <img src="assets/leelapalace.jpg">
+      <h4>The Leela Palace, New Delhi</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 7833</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/itcchola.jpg">
+      <h4>ITC Grand Chola, Chennai</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 3493</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/jwaerocity.jpg">
+      <h4>JW Marriott Hotel New Delhi Aerocity</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 17875</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/parkhyatt.jpg">
+      <h4>Park Hyatt Hyderabad</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 9126</div> -->
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- section 2 -->
+ 
+<section class="hotels-section">
+
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'" (click)="goToHotel()">
+
+    <div class="hotel-card">
+      <img src="assets/plazahotel.jpg">
+      <h4>The Plaza Hotel (New York City)</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 7833</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/beverly.jpg">
+      <h4>The Beverly Hills Hotel (Los Angeles)</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 3493</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/waldorf.jpg">
+      <h4>Waldorf Astoria Los Cabos Pedregal</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 17875</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/fourseason.jpg">
+      <h4>Four Seasons Hotel Mexico City</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 9126</div> -->
+    </div>
+
+  </div>
+
+
+  <!-- Cards international-->
+  <div data-aos="fade-up" class="hotel-cards" *ngIf="selectedTab === 'international'" style="margin-top: 20px;" (click)="goToHotel()">
+
+    <div class="hotel-card">
+      <img src="assets/bagota.jpg">
+      <h4>JW Marriott Hotel Bogota</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 7833</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/columbia.jpg">
+      <h4>Medellin Marriott Hotel</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 3493</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/fairmont.jpg">
+      <h4>Fairmont Le Château Frontenac, Canada</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 17875</div> -->
+    </div>
+
+    <div class="hotel-card">
+      <img src="assets/wickkannish.jpg">
+      <h4>Wickaninnish Inn Resort in Canada</h4>
+      <!-- <div class="rating">⭐⭐⭐⭐⭐</div> -->
+      <!-- <div class="price">₹ 9126</div> -->
+    </div>
+
+  </div>
+
+  <div class="hotel-list-content">
+  <h4>
+    Hotel information, availability, pricing and booking conditions are subject to the respective hotel or booking provider
+  </h4>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- call me section  -->
+
+
+<section class="deals-section" data-aos="fade-up">
+
+  <div class="deals-left">
+
+    <span class="badge">Get Travel Assistance</span>
+
+    <h2>Need Help With Your Travel Plans?</h2>
+
+    <p>
+     Get assistance with flights, hotels, changes, cancellations and other travel-related requests.
+    </p>
+
+    <div class="callback-box">
+
+      <input type="text" placeholder="Enter your phone number">
+      <button (click)="openWhatsApp()">Connect with Us</button>
+
+    </div>
+
+    <small class="hint">Our team will contact you regarding your travel request.</small>
+
+  </div>
+
+  <div class="deals-right">
+    <img src="https://plus.unsplash.com/premium_photo-1687533705373-0830e84d757d?q=80&w=1169&auto=format&fit=crop">
+  </div>
+
+</section>
+
+
+
+<!-- Third Section -->
+
+<section class="why-section" data-aos="fade-up">
+
+  <div class="why-left">
+    <img src="https://images.unsplash.com/flagged/photo-1551135049-83f3419ef05c?q=80&w=1170&auto=format&fit=crop">
+  </div>
+
+  <div class="why-right">
+
+    <h2>Why Choose The Travel Services?</h2>
+
+    <p>
+      We provide travel assistance and customer support for flight, hotel and other travel-related requirements.
+    </p>
+
+    <ul>
+      <li>Dedicated Customer Assistance</li>
+      <li>Personalized Customer Assistance</li>
+      <li>Flight & Hotel Booking Support</li>
+      <li>Change & Cancellation Assistance</li>
+    </ul>
+
+  </div>
+
+</section>
